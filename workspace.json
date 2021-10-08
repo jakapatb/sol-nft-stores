@@ -3,37 +3,69 @@
   "projects": {
     "example": {
       "root": "apps/example",
-      "sourceRoot": "apps/example",
+      "sourceRoot": "apps/example/src",
       "projectType": "application",
       "targets": {
         "build": {
-          "executor": "@nrwl/next:build",
+          "executor": "@nrwl/web:build",
           "outputs": ["{options.outputPath}"],
           "options": {
-            "root": "apps/example",
-            "outputPath": "dist/apps/example"
+            "outputPath": "dist/apps/example",
+            "index": "apps/example/src/index.html",
+            "main": "apps/example/src/main.tsx",
+            "polyfills": "apps/example/src/polyfills.ts",
+            "tsConfig": "apps/example/tsconfig.app.json",
+            "assets": [
+              "apps/example/src/favicon.ico",
+              "apps/example/src/assets"
+            ],
+            "styles": ["apps/example/src/styles.css"],
+            "scripts": [],
+            "webpackConfig": "@nrwl/react/plugins/webpack"
           },
           "configurations": {
-            "production": {}
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/example/src/environments/environment.ts",
+                  "with": "apps/example/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                }
+              ]
+            }
           }
         },
         "serve": {
-          "executor": "@nrwl/next:server",
+          "executor": "@nrwl/web:dev-server",
           "options": {
             "buildTarget": "example:build",
-            "dev": true
+            "hmr": true
           },
           "configurations": {
             "production": {
               "buildTarget": "example:build:production",
-              "dev": false
+              "hmr": false
             }
           }
         },
-        "export": {
-          "executor": "@nrwl/next:export",
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
           "options": {
-            "buildTarget": "example:build:production"
+            "lintFilePatterns": ["apps/example/**/*.{ts,tsx,js,jsx}"]
           }
         },
         "test": {
@@ -43,39 +75,57 @@
             "jestConfig": "apps/example/jest.config.js",
             "passWithNoTests": true
           }
-        },
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
-          "options": {
-            "lintFilePatterns": ["apps/example/**/*.{ts,tsx,js,jsx}"]
-          }
         }
       }
     },
-    "example-e2e": {
-      "root": "apps/example-e2e",
-      "sourceRoot": "apps/example-e2e/src",
+    "get-nft": {
+      "root": "apps/get-nft",
+      "sourceRoot": "apps/get-nft",
       "projectType": "application",
       "targets": {
-        "e2e": {
-          "executor": "@nrwl/cypress:cypress",
+        "build": {
+          "executor": "@nrwl/next:build",
+          "outputs": ["{options.outputPath}"],
           "options": {
-            "cypressConfig": "apps/example-e2e/cypress.json",
-            "devServerTarget": "example:serve",
-            "tsConfig": "apps/example-e2e/tsconfig.json"
+            "root": "apps/get-nft",
+            "outputPath": "dist/apps/get-nft"
+          },
+          "configurations": {
+            "production": {}
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/next:server",
+          "options": {
+            "buildTarget": "get-nft:build",
+            "dev": true
           },
           "configurations": {
             "production": {
-              "devServerTarget": "example:serve:production"
+              "buildTarget": "get-nft:build:production",
+              "dev": false
             }
+          }
+        },
+        "export": {
+          "executor": "@nrwl/next:export",
+          "options": {
+            "buildTarget": "get-nft:build:production"
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/get-nft"],
+          "options": {
+            "jestConfig": "apps/get-nft/jest.config.js",
+            "passWithNoTests": true
           }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "outputs": ["{options.outputFile}"],
           "options": {
-            "lintFilePatterns": ["apps/example-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": ["apps/get-nft/**/*.{ts,tsx,js,jsx}"]
           }
         }
       }
@@ -87,7 +137,16 @@
   "generators": {
     "@nrwl/react": {
       "application": {
+        "style": "css",
+        "linter": "eslint",
         "babel": true
+      },
+      "component": {
+        "style": "css"
+      },
+      "library": {
+        "style": "css",
+        "linter": "eslint"
       }
     },
     "@nrwl/next": {
@@ -97,5 +156,5 @@
       }
     }
   },
-  "defaultProject": "example"
+  "defaultProject": "get-nft"
 }
