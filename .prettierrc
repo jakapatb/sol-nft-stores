@@ -5,5 +5,13 @@
   "singleQuote": true,
   "printWidth": 120,
   "arrowParens": "always",
-  "proseWrap": "never"
+  "proseWrap": "never",
+  "overrides": [
+    {
+      "files": ["*.yml"],
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ]
 }
