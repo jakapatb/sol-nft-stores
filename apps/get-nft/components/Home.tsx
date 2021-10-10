@@ -9,17 +9,15 @@ import * as anchor from '@project-serum/anchor'
 import { LAMPORTS_PER_SOL } from '@solana/web3.js'
 
 import { useAnchorWallet } from '@solana/wallet-adapter-react'
-import { WalletDialogButton } from '@solana/wallet-adapter-material-ui'
-
+import { WalletMultiButton } from '@solana/wallet-adapter-react-ui'
 import {
   CandyMachine,
   awaitTransactionSignatureConfirmation,
   getCandyMachineState,
   mintOneToken,
   shortenAddress
-} from './candy-machine'
-
-const ConnectButton = styled(WalletDialogButton)``
+} from '../utils/candy-machine'
+import { useConfig } from '../providers/ConfigProvider'
 
 const CounterText = styled.span`` // add your styles here
 
@@ -27,16 +25,9 @@ const MintContainer = styled.div`` // add your styles here
 
 const MintButton = styled(Button)`` // add your styles here
 
-export interface HomeProps {
-  candyMachineId: anchor.web3.PublicKey
-  config: anchor.web3.PublicKey
-  connection: anchor.web3.Connection
-  startDate: number
-  treasury: anchor.web3.PublicKey
-  txTimeout: number
-}
+const Home = () => {
+  const props = useConfig()
 
-const Home = (props: HomeProps) => {
   const [balance, setBalance] = useState<number>()
   const [isActive, setIsActive] = useState(false) // true when countdown completes
   const [isSoldOut, setIsSoldOut] = useState(false) // true when items remaining is zero
@@ -110,6 +101,7 @@ const Home = (props: HomeProps) => {
       let message = error.msg || 'Minting failed! Please try again!'
       if (!error.msg) {
         if (error.message.indexOf('0x138')) {
+          //?
         } else if (error.message.indexOf('0x137')) {
           message = `SOLD OUT!`
         } else if (error.message.indexOf('0x135')) {
@@ -164,7 +156,7 @@ const Home = (props: HomeProps) => {
 
       <MintContainer>
         {!wallet ? (
-          <ConnectButton>Connect Wallet</ConnectButton>
+          <WalletMultiButton>Connect Wallet</WalletMultiButton>
         ) : (
           <MintButton disabled={isSoldOut || isMinting || !isActive} onClick={onMint} variant="contained">
             {isSoldOut ? (

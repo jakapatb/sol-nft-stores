@@ -11,15 +11,11 @@
           "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/example",
-            "index": "apps/example/src/index.html",
-            "main": "apps/example/src/main.tsx",
-            "polyfills": "apps/example/src/polyfills.ts",
+            "index": "apps/example/public/index.html",
+            "main": "apps/example/src/index.tsx",
             "tsConfig": "apps/example/tsconfig.app.json",
-            "assets": [
-              "apps/example/src/favicon.ico",
-              "apps/example/src/assets"
-            ],
-            "styles": ["apps/example/src/styles.css"],
+            "assets": [],
+            "styles": ["apps/example/src/index.css"],
             "scripts": [],
             "webpackConfig": "@nrwl/react/plugins/webpack"
           },

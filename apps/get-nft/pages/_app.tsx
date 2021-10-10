@@ -1,6 +1,12 @@
-import { AppProps } from 'next/app';
-import Head from 'next/head';
-import './styles.css';
+import { AppProps } from 'next/app'
+import Head from 'next/head'
+import React from 'react'
+
+import dynamic from 'next/dynamic'
+
+const ConfigProvider = dynamic(() => import('../providers/ConfigProvider'), {
+  ssr: false
+})
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
@@ -8,18 +14,12 @@ function CustomApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Welcome to example!</title>
       </Head>
-      <div className="app">
-        <header className="flex">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/nx-logo-white.svg" alt="Nx logo" width="75" height="50" />
-          <h1>Welcome to example!</h1>
-        </header>
-        <main>
-          <Component {...pageProps} />
-        </main>
-      </div>
+
+      <ConfigProvider>
+        <Component {...pageProps} />
+      </ConfigProvider>
     </>
-  );
+  )
 }
 
-export default CustomApp;
+export default CustomApp
