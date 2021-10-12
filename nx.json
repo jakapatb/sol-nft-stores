@@ -36,6 +36,9 @@
     },
     "utils": {
       "tags": []
+    },
+    "vdo-creator": {
+      "tags": []
     }
   }
 }

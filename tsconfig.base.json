@@ -2,21 +2,35 @@
   "compileOnSave": false,
   "compilerOptions": {
     "rootDir": ".",
+    "jsx": "react-jsx",
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "target": "es2015",
+    "target": "es2018",
     "module": "esnext",
-    "lib": ["es2017", "dom"],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
     "skipLibCheck": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@sol-nft-stores/utils": ["libs/utils/src/index.ts"]
+      "@sol-nft-stores/utils": [
+        "libs/utils/src/index.ts"
+      ],
+      "@sol-nft-stores/vdo-creator": [
+        "libs/vdo-creator/src/index.ts"
+      ]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }

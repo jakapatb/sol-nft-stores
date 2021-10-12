@@ -1,0 +1,24 @@
+{
+  "cli": "nx",
+  "id": "gen-vdo",
+  "type": "object",
+  "properties": {
+    "mode": {
+      "type": "string",
+      "description": "mode",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    },
+    "application": {
+      "type": "string",
+      "description": "App name",
+      "$default": {
+        "$source": "argv",
+        "index": 1
+      }
+    }
+  },
+  "required": ["mode", "application"]
+}

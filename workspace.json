@@ -178,6 +178,33 @@
           }
         }
       }
+    },
+    "vdo-creator": {
+      "root": "libs/vdo-creator",
+      "sourceRoot": "libs/vdo-creator/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/vdo-creator/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/vdo-creator"],
+          "options": {
+            "jestConfig": "libs/vdo-creator/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "vdo-generator": {
+      "root": "apps/vdo-generator",
+      "sourceRoot": "apps/vdo-generator",
+      "projectType": "application"
     }
   },
   "cli": {
