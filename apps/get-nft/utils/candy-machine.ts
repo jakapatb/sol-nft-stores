@@ -140,7 +140,6 @@ export const awaitTransactionSignatureConfirmation = async (
     data: Buffer.from([])
   })
 }
-
 export const getCandyMachineState = async (
   anchorWallet: anchor.Wallet,
   candyMachineId: anchor.web3.PublicKey,
