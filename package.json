@@ -7,7 +7,8 @@
     "build": "nx build",
     "test": "nx test",
     "i18n": "nx workspace-generator i18nSheetPraser",
-    "gen-meta": "nx workspace-generator gen-meta"
+    "gen-meta": "nx workspace-generator gen-meta",
+    "storybook": "nx storybook"
   },
   "private": true,
   "dependencies": {
@@ -24,7 +25,9 @@
     "@solana/wallet-adapter-react-ui": "^0.5.1",
     "@solana/wallet-adapter-wallets": "^0.10.1",
     "@solana/web3.js": "^1.29.2",
+    "canvas": "^2.8.0",
     "core-js": "^3.6.5",
+    "dayjs": "^1.10.7",
     "fs": "^0.0.1-security",
     "next": "11.1.0",
     "react": "17.0.2",

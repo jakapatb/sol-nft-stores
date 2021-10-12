@@ -16,7 +16,7 @@ import {
   getCandyMachineState,
   mintOneToken,
   shortenAddress
-} from '../utils/candy-machine'
+} from '@sol-nft-stores/utils'
 import { useConfig } from '../providers/ConfigProvider'
 
 const CounterText = styled.span`` // add your styles here
