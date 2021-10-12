@@ -157,6 +157,32 @@
         }
       }
     },
+    "get-nft-e2e": {
+      "root": "apps/get-nft-e2e",
+      "sourceRoot": "apps/get-nft-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/get-nft-e2e/cypress.json",
+            "devServerTarget": "get-nft:storybook"
+          },
+          "configurations": {
+            "ci": {
+              "devServerTarget": "get-nft:storybook:ci"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["apps/get-nft-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
     "utils": {
       "root": "libs/utils",
       "sourceRoot": "libs/utils/src",

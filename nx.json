@@ -34,11 +34,16 @@
     "get-nft": {
       "tags": []
     },
+    "get-nft-e2e": {
+      "tags": [],
+      "implicitDependencies": ["get-nft"]
+    },
     "utils": {
       "tags": []
     },
     "vdo-creator": {
       "tags": []
-    }
+    },
+    "vdo-generator": {}
   }
 }

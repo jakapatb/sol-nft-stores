@@ -82,7 +82,7 @@ const Home = () => {
           false
         )
 
-        if (!status?.err) {
+        if (status && !status?.err) {
           setAlertState({
             open: true,
             message: 'Congratulations! Mint succeeded!',
