@@ -1,0 +1,16 @@
+{
+  "cli": "nx",
+  "id": "gen-nft",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "App name",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    }
+  },
+  "required": ["name"]
+}

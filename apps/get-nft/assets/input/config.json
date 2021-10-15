@@ -1,0 +1,28 @@
+{
+  "orders": ["bg", "shirt", "bag", "head", "eye", "core", "horn", "sticker"],
+  "default": {
+    "name": "RobertX:",
+    "symbol": "IDKWTF",
+    "description": "Reprehenderit id et.",
+    "external_url": "https://docs.metaplex.com/",
+    "image": "image.png",
+    "seller_fee_basis_points": 0,
+    "collection": { "name": "GENESIS1", "family": "WTF TEST!1" },
+    "properties": {
+      "files": [
+        {
+          "uri": "image.png",
+          "type": "image/png"
+        }
+      ],
+      "category": "image",
+      "maxSupply": 1,
+      "creators": [
+        {
+          "address": "859NKesAK6n4jG9T777QzGMZEHkvVJR65HK63pY9Ff4C",
+          "share": 100
+        }
+      ]
+    }
+  }
+}

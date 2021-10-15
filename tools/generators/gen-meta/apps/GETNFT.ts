@@ -9,7 +9,7 @@ export const getGETNFT = async (): Promise<unknown[]> => {
       properties: {
         files: [
           {
-            uri: 'https://www.arweave.net/abcd5678?ext=png',
+            uri: 'image.png',
             type: 'image/png'
           }
         ],
@@ -17,11 +17,7 @@ export const getGETNFT = async (): Promise<unknown[]> => {
         creators: [
           {
             address: '859NKesAK6n4jG9T777QzGMZEHkvVJR65HK63pY9Ff4C',
-            share: 80
-          },
-          {
-            address: '4GnNK6VAkLzNiVWmiC28gJoa7jqTWMuWYqRo5erZ8iWj',
-            share: 20
+            share: 100
           }
         ]
       }

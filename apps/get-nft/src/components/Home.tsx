@@ -144,6 +144,7 @@ const Home = () => {
 
   return (
     <main>
+      {isActive ? 'Active' : 'UnActive'}
       {wallet && <p>Wallet {shortenAddress(wallet.publicKey.toBase58() || '')}</p>}
 
       {wallet && <p>Balance: {(balance || 0).toLocaleString()} SOL</p>}
@@ -168,12 +169,7 @@ const Home = () => {
                 'MINT'
               )
             ) : (
-              <Countdown
-                date={startDate}
-                onMount={({ completed }) => completed && setIsActive(true)}
-                onComplete={() => setIsActive(true)}
-                renderer={renderCounter}
-              />
+              <Countdown date={startDate} onComplete={() => setIsActive(true)} renderer={renderCounter} />
             )}
           </MintButton>
         )}

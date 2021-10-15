@@ -1,0 +1,33 @@
+{
+  "name": "ROGUE SHARKS #4677",
+  "description": "5,000 High-quality 3D Rogue Shark NFTs swimming on the Solana blockchain",
+  "image": "https://www.arweave.net/oHB9ZmNu11sRfXO8e6E93RCYWwgbrR6OJT2RDdtYSZk?ext=png",
+  "attributes": [
+    { "trait_type": "Background", "value": "Coral Green" },
+    { "trait_type": "Weapon", "value": "None " },
+    { "trait_type": "Skin", "value": "Stone-White" },
+    { "trait_type": "Clothing", "value": "Blue Fighter's Tanktop" },
+    { "trait_type": "Neck", "value": "None " },
+    { "trait_type": "Eyes", "value": "Radioactive Eyes" },
+    { "trait_type": "Eye Mask", "value": "None" },
+    { "trait_type": "Head", "value": "Yellow Camo Bucket " },
+    { "trait_type": "Teeth", "value": "Normal " },
+    { "trait_type": "Mouth", "value": "None" }
+  ],
+  "symbol": "SHARK",
+  "seller_fee_basis_points": 420,
+  "external_url": "https://www.roguesharks.org",
+  "collection": { "name": "GEN 1: Great Whites", "family": "Rogue Sharks" },
+  "properties": {
+    "files": [
+      { "uri": "https://www.arweave.net/oHB9ZmNu11sRfXO8e6E93RCYWwgbrR6OJT2RDdtYSZk?ext=png", "type": "image/png" }
+    ],
+    "category": "image",
+    "maxSupply": 1,
+    "creators": [{ "address": "AmivaqHeZBgUZkzEZ44Mi9zQJruExZMP4PVRYduFVkaS", "share": 100 }],
+    "compiler": "HashLips Art Engine",
+    "date": 1633434520276,
+    "dna": "cede2b3d474acf6999ea47c9da928505d4c20bf3",
+    "edition": 1902
+  }
+}

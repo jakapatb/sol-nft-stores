@@ -9,6 +9,8 @@
     "storybook": "nx storybook",
     "i18n": "nx workspace-generator i18nSheetPraser",
     "gen-meta": "nx workspace-generator gen-meta",
+    "gen-nft": "nx workspace-generator gen-nft",
+    "gen-image": "nx workspace-generator gen-image",
     "gen-vdo": "nx workspace-generator gen-vdo"
   },
   "private": true,
@@ -37,6 +39,7 @@
     "core-js": "^3.6.5",
     "dayjs": "^1.10.7",
     "fs": "^0.0.1-security",
+    "lodash": "^4.17.21",
     "next": "11.1.0",
     "react": "17.0.2",
     "react-countdown": "^2.3.2",
