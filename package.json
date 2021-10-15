@@ -8,9 +8,7 @@
     "test": "nx test",
     "storybook": "nx storybook",
     "i18n": "nx workspace-generator i18nSheetPraser",
-    "gen-meta": "nx workspace-generator gen-meta",
     "gen-nft": "nx workspace-generator gen-nft",
-    "gen-image": "nx workspace-generator gen-image",
     "gen-vdo": "nx workspace-generator gen-vdo"
   },
   "private": true,

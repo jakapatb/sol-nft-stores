@@ -40,7 +40,13 @@
       "extends": [
         "plugin:@nrwl/nx/typescript"
       ],
-      "rules": {}
+      "rules": {
+        "indent": [
+          2,
+          "tab",
+          {}
+        ]
+      }
     },
     {
       "files": [
