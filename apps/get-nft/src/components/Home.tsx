@@ -169,7 +169,12 @@ const Home = () => {
                 'MINT'
               )
             ) : (
-              <Countdown date={startDate} onComplete={() => setIsActive(true)} renderer={renderCounter} />
+              <Countdown
+                date={startDate}
+                onComplete={() => setIsActive(true)}
+                onMount={(props) => props.completed && setIsActive(true)}
+                renderer={renderCounter}
+              />
             )}
           </MintButton>
         )}
