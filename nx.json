@@ -28,18 +28,15 @@
     ]
   },
   "projects": {
-    "example": {
-      "tags": []
-    },
-    "get-nft": {
-      "tags": []
-    },
-    "get-nft-e2e": {
-      "tags": [],
-      "implicitDependencies": ["get-nft"]
-    },
     "robert-xnft": {
       "tags": []
+    },
+    "robertx": {
+      "tags": []
+    },
+    "robertx-e2e": {
+      "tags": [],
+      "implicitDependencies": ["robertx"]
     },
     "utils": {
       "tags": []
