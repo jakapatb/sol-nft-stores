@@ -14,10 +14,10 @@ function CustomApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Welcome to example!</title>
       </Head>
-
-      <ConfigProvider>
-        <Component {...pageProps} />
-      </ConfigProvider>
+      <Component {...pageProps} />
+      {/* <ConfigProvider>
+      <Component {...pageProps} />
+      </ConfigProvider> */}
     </>
   )
 }
