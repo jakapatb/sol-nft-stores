@@ -1,58 +1,6 @@
 {
   "version": 2,
   "projects": {
-    "robert-xnft": {
-      "root": "apps/robert-xnft",
-      "sourceRoot": "apps/robert-xnft",
-      "projectType": "application",
-      "targets": {
-        "build": {
-          "executor": "@nrwl/next:build",
-          "outputs": ["{options.outputPath}"],
-          "options": {
-            "root": "apps/robert-xnft",
-            "outputPath": "dist/apps/robert-xnft"
-          },
-          "configurations": {
-            "production": {}
-          }
-        },
-        "serve": {
-          "executor": "@nrwl/next:server",
-          "options": {
-            "buildTarget": "robert-xnft:build",
-            "dev": true
-          },
-          "configurations": {
-            "production": {
-              "buildTarget": "robert-xnft:build:production",
-              "dev": false
-            }
-          }
-        },
-        "export": {
-          "executor": "@nrwl/next:export",
-          "options": {
-            "buildTarget": "robert-xnft:build:production"
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/robert-xnft"],
-          "options": {
-            "jestConfig": "apps/robert-xnft/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
-          "options": {
-            "lintFilePatterns": ["apps/robert-xnft/**/*.{ts,tsx,js,jsx}"]
-          }
-        }
-      }
-    },
     "robertx": {
       "root": "apps/robertx",
       "sourceRoot": "apps/robertx",
@@ -158,6 +106,80 @@
           "outputs": ["{options.outputFile}"],
           "options": {
             "lintFilePatterns": ["apps/robertx-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "robertx-showcase": {
+      "root": "apps/robertx-showcase",
+      "sourceRoot": "apps/robertx-showcase",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/next:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "root": "apps/robertx-showcase",
+            "outputPath": "dist/apps/robertx-showcase"
+          },
+          "configurations": {
+            "production": {}
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/next:server",
+          "options": {
+            "buildTarget": "robertx-showcase:build",
+            "dev": true
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "robertx-showcase:build:production",
+              "dev": false
+            }
+          }
+        },
+        "export": {
+          "executor": "@nrwl/next:export",
+          "options": {
+            "buildTarget": "robertx-showcase:build:production"
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/robertx-showcase"],
+          "options": {
+            "jestConfig": "apps/robertx-showcase/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["apps/robertx-showcase/**/*.{ts,tsx,js,jsx}"]
+          }
+        }
+      }
+    },
+    "roberx-nft": {
+      "root": "libs/roberx-nft",
+      "sourceRoot": "libs/roberx-nft/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/roberx-nft/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/roberx-nft"],
+          "options": {
+            "jestConfig": "libs/roberx-nft/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }
