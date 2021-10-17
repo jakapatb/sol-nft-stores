@@ -6,7 +6,7 @@ const Home = dynamic(() => import('../components/Home'), {
 })
 
 const HomePage = () => {
-  return <Home />
+  return <h1>Hello world</h1>
 }
 
 export default HomePage
