@@ -35,10 +35,14 @@
       "tags": [],
       "implicitDependencies": ["robertx"]
     },
-    "robertx-showcase": {
+    "robertx-nft": {
       "tags": []
     },
-    "roberx-nft": {
+    "robertx-nft-e2e": {
+      "tags": [],
+      "implicitDependencies": ["robertx-nft"]
+    },
+    "robertx-showcase": {
       "tags": []
     },
     "utils": {

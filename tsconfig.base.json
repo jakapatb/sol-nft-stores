@@ -18,7 +18,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@sol-nft-stores/roberx-nft": ["libs/roberx-nft/src/index.ts"],
+      "@sol-nft-stores/robertx-nft": ["libs/robertx-nft/src/index.ts"],
       "@sol-nft-stores/utils": ["libs/utils/src/index.ts"],
       "@sol-nft-stores/vdo-creator": ["libs/vdo-creator/src/index.ts"]
     }

@@ -63,9 +63,7 @@
         "*.ts",
         "*.tsx"
       ],
-      "extends": [
-        "@remotion"
-      ],
+      "extends": [],
       "rules": {}
     }
   ]
