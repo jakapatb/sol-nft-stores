@@ -38,6 +38,9 @@
       "tags": [],
       "implicitDependencies": ["get-nft"]
     },
+    "robert-xnft": {
+      "tags": []
+    },
     "utils": {
       "tags": []
     },
