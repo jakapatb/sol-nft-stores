@@ -1,0 +1,13 @@
+body{
+	font-family: 'Roboto', sans-serif;
+	color: #ffffff;
+	margin:0;
+	background: var(--black);
+	/* #08D9D6
+#252A34
+#FF2E63
+#EAEAEA */
+}
+:root{
+	--black:#252A34;
+}
