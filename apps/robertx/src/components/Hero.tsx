@@ -1,11 +1,9 @@
 import React from 'react'
-import Image from 'next/image'
-import { motion, useTransform, useViewportScroll } from 'framer-motion'
 import styled from '@emotion/styled'
 
 const Wrapper = styled.div`
 	display: grid;
-	height: 60rem;
+	height: 45rem;
 	text-align: center;
 `
 const Content = styled.div`
