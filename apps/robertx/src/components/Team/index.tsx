@@ -1,11 +1,12 @@
 import styled from '@emotion/styled'
 import React from 'react'
 import Image from 'next/image'
-import { Title } from './Title'
-import { breakpoint } from '../styles/breakpoint'
-
+import { Title } from '../Title'
+import { breakpoint } from '../../styles/breakpoint'
+import nftPng from '../../assets/nft.png'
 const Frame = styled.div`
 	border-radius: 2rem;
+	background: var(--black);
 	border: 0.5rem solid var(--black);
 	width: 300px;
 	height: 300px;
@@ -40,7 +41,7 @@ export const Team: React.FC = () => {
 			<Content>
 				<Member>
 					<Frame>
-						<Image src="/nft.png" width={300} height={300} alt="NFT" />
+						<Image src={nftPng} width={300} height={300} alt="NFT" placeholder="blur" />
 					</Frame>
 					<h3>Eugene Rice</h3>
 					<p>Project manager & Developer</p>
@@ -48,7 +49,7 @@ export const Team: React.FC = () => {
 				</Member>
 				<Member>
 					<Frame>
-						<Image src="/nft.png" width={300} height={300} alt="NFT" />
+						<Image src={nftPng} width={300} height={300} alt="NFT" placeholder="blur" />
 					</Frame>
 					<h3>Eugene Rice</h3>
 					<p>Art & Design</p>
@@ -56,7 +57,7 @@ export const Team: React.FC = () => {
 				</Member>
 				<Member>
 					<Frame>
-						<Image src="/nft.png" width={300} height={300} alt="NFT" />
+						<Image src={nftPng} width={300} height={300} alt="NFT" placeholder="blur" />
 					</Frame>
 					<h3>Eugene Rice</h3>
 					<p>Marketing & Admin</p>
