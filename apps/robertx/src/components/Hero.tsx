@@ -30,7 +30,7 @@ const VDOFilter = styled.div`
 	right: 0;
 	top: 0;
 	bottom: 0;
-	background: radial-gradient(50% 75% at 50% 25%, rgba(255, 255, 255, 10%) 10%, var(--black) 100%);
+	background: radial-gradient(50% 75% at 50% 25%, rgba(255, 255, 255, 0) 10%, var(--black) 100%);
 	/* background: linear-gradient(180deg, rgba(205, 255, 255, 0) 0%, var(--black) 75%); */
 	z-index: -1;
 	&:before {
@@ -45,7 +45,7 @@ const VDOFilter = styled.div`
 	}
 `
 const BackgroundVDO = styled.video`
-	opacity: 50%;
+	opacity: 40%;
 	width: 98.75vw;
 	height: 62.5rem;
 	object-fit: cover;
