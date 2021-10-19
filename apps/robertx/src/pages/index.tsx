@@ -7,13 +7,7 @@ import { Team } from '../components/Team'
 const HomePage = () => {
 	return (
 		<>
-			<div
-				style={{
-					minHeight: '100vh'
-				}}
-			>
-				<Hero />
-			</div>
+			<Hero />
 			<div
 				style={{
 					minHeight: '100vh'

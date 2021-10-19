@@ -17,7 +17,7 @@ const Stick = styled(motion.header)`
 	position: sticky;
 	z-index: 50;
 	top: 0;
-	background: var(--black);
+	/* background: var(--black); */
 `
 // const YRangeTrigger = [0, 512]
 export const Header: React.FC = () => {
