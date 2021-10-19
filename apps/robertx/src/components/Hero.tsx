@@ -30,13 +30,13 @@ const VDOFilter = styled.div`
 	right: 0;
 	top: 0;
 	bottom: 0;
-	background: radial-gradient(50% 75% at 50% 25%, rgba(205, 255, 255, 0) 10%, var(--black) 100%);
+	background: radial-gradient(50% 75% at 50% 25%, rgba(255, 255, 255, 10%) 10%, var(--black) 100%);
 	/* background: linear-gradient(180deg, rgba(205, 255, 255, 0) 0%, var(--black) 75%); */
 	z-index: -1;
 	&:before {
 		content: '';
 		position: absolute;
-		background: linear-gradient(0deg, rgba(205, 255, 255, 0) 0%, var(--black) 75%);
+		background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, var(--black) 75%);
 		height: 10rem;
 		left: 0;
 		right: 0;
