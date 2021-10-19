@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import { Fade } from '@mui/material'
 
 const Wrapper = styled.div`
 	margin-top: -5rem;
@@ -61,19 +62,21 @@ export const Hero: React.FC = () => {
 		<>
 			<Wrapper>
 				<Content>
-					<h1>
-						Robert-X <br />
-						2088 Unique Generative NFT
-						<br />
-						on Solana Blockchain
-					</h1>
+					<Fade in appear>
+						<h1>
+							Robert-X <br />
+							2088 Unique Generative NFT
+							<br />
+							on Solana Blockchain
+						</h1>
+					</Fade>
 					{/* <p>
 					Est itaque unde ratione. Quasi minus voluptatem eveniet. Recusandae ipsum molestiae numquam libero deserunt
 					inventore incidunt aperiam voluptatem.
 				</p> */}
 				</Content>
 				<VDOFilter />
-				<BackgroundVDO loop autoPlay>
+				<BackgroundVDO loop={true} autoPlay={true} muted>
 					<source src="/BG-Dark.mp4" type="video/mp4" />
 				</BackgroundVDO>
 			</Wrapper>
