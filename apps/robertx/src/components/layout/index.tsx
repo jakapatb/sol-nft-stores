@@ -11,18 +11,27 @@ const Background = styled.div`
 	left: 0px;
 	width: 100%;
 	overflow: hidden;
-	transform: translate3d(0px, 0px, 0px);
+
 	height: -webkit-fill-available;
 	background: radial-gradient(50% 50% at 50% 50%, #08d9d6 0%, #252a34 100%);
 	opacity: 0.15;
 	user-select: none;
 	pointer-events: none;
 `
+const BackgroundA = styled(Background)`
+	transform: translate3d(-50%, 20%, 0px);
+	background: radial-gradient(50% 50% at 50% 50%, #08d9d6 0%, #252a34 100%);
+`
+const BackgroundB = styled(Background)`
+	transform: translate3d(50%, -20%, 0px);
+	background: radial-gradient(50% 50% at 50% 50%, var(--red) 0%, #252a34 100%);
+`
 export const Layout: React.FC = ({ children }) => {
 	return (
 		<>
 			<Header />
-			<Background />
+			<BackgroundA />
+			<BackgroundB />
 			<Container maxWidth="lg">{children}</Container>
 			<Footer />
 		</>

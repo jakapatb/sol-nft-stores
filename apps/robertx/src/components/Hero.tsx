@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { Fade } from '@mui/material'
+import { GlitchText } from './GlitchText'
+import Image from 'next/image'
 
 const Wrapper = styled.div`
 	margin-top: -5rem;
@@ -56,29 +58,29 @@ const BackgroundVDO = styled.video`
 	bottom: 0;
 	z-index: -2;
 `
+const ImageWrapper = styled.div`
+	width: 25rem;
+	height: 10rem;
+	position: relative;
+`
 
 export const Hero: React.FC = () => {
 	return (
 		<>
 			<Wrapper>
 				<Content>
-					<Fade in appear>
-						<h1>
-							Robert-X <br />
-							2088 Unique Generative NFT
-							<br />
-							on Solana Blockchain
-						</h1>
-					</Fade>
+					<ImageWrapper>
+						<Image src="/logo.png" alt="RobertX Logo" layout="fill" objectFit="contain" />
+					</ImageWrapper>
 					{/* <p>
 					Est itaque unde ratione. Quasi minus voluptatem eveniet. Recusandae ipsum molestiae numquam libero deserunt
 					inventore incidunt aperiam voluptatem.
 				</p> */}
 				</Content>
-				<VDOFilter />
-				<BackgroundVDO loop={true} autoPlay={true} muted>
+				{/* <VDOFilter /> */}
+				{/* <BackgroundVDO loop={true} autoPlay={true} muted>
 					<source src="/BG-Dark.mp4" type="video/mp4" />
-				</BackgroundVDO>
+				</BackgroundVDO> */}
 			</Wrapper>
 		</>
 	)

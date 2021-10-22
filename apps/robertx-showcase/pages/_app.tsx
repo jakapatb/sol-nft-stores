@@ -5,7 +5,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
 	return (
 		<>
 			<Head>
-				<title>Welcome to robert-xnft!</title>
+				<title>Welcome to RobertXnft!</title>
 				<style>
 					{`
 				body{

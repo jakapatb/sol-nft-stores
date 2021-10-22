@@ -8,7 +8,7 @@ export const Footer: React.FC = () => {
 	return (
 		<Content>
 			<p>Develop & Design With 💚 </p>
-			<p>© 2021 Robert-X. All rights reserved.</p>
+			<p>© 2021 RobertX. All rights reserved.</p>
 		</Content>
 	)
 }

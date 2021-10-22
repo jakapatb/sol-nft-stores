@@ -4,27 +4,38 @@ import React from 'react'
 import './style.css'
 import dynamic from 'next/dynamic'
 import { Layout } from '../components/layout'
-import { AnimateSharedLayout } from 'framer-motion'
+import { createTheme, ThemeProvider } from '@mui/material'
+import { CacheProvider, EmotionCache } from '@emotion/react'
+import createEmotionCache from '../styles/emotionCache'
 
+const clientSideEmotionCache = createEmotionCache()
 const ConfigProvider = dynamic(() => import('../providers/ConfigProvider'), {
 	ssr: false
 })
+const theme = createTheme({
+	palette: {
+		mode: 'dark'
+	}
+})
 
-function CustomApp({ Component, pageProps }: AppProps) {
+interface MyAppProps extends AppProps {
+	emotionCache?: EmotionCache
+}
+function CustomApp({ Component, pageProps, emotionCache = clientSideEmotionCache }: MyAppProps) {
 	return (
-		<>
+		<CacheProvider value={emotionCache}>
 			<Head>
-				<title>Robert-X NFT</title>
+				<title>RobertX NFT</title>
 			</Head>
-			<AnimateSharedLayout type="crossfade">
+			<ThemeProvider theme={theme}>
 				<Layout>
 					<Component {...pageProps} />
 				</Layout>
-			</AnimateSharedLayout>
+			</ThemeProvider>
 			{/* <ConfigProvider>
       <Component {...pageProps} />
       </ConfigProvider> */}
-		</>
+		</CacheProvider>
 	)
 }
 
