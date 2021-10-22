@@ -37,7 +37,7 @@ class MyDocument extends Document {
 		ctx.renderPage = () =>
 			originalRenderPage({
 				// eslint-disable-next-line react/display-name
-				enhanceApp: (App: any) => (props: JSX.IntrinsicAttributes) => <App emotionCache={cache} {...props} />
+				enhanceApp: (App: any) => (props) => <App emotionCache={cache} {...props} />
 			})
 
 		const initialProps = await Document.getInitialProps(ctx)
